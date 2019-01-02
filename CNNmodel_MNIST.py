@@ -43,7 +43,7 @@ def cnn_model():
     model.add(Dense(units=50, activation='relu'))
     model.add(Dense(units=10, activation='softmax'))
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-    model.fit(X_train, y_train, epochs=3, batch_size=128, verbose = 2)
+    model.fit(X_train, y_train, epochs=3, batch_size=128, verbose = 1)
     return model
 
 model = cnn_model()
