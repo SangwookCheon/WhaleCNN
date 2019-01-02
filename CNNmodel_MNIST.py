@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from keras.layers import Dense, Dropout, Conv2D, MaxPooling2D, Flatten
+from keras.layers import Dense, Conv2D, Flatten, Dropout, MaxPooling2D
 from keras.models import Sequential
 from keras.optimizers import Adam
 from sklearn.preprocessing import StandardScaler
@@ -43,7 +43,7 @@ def cnn_model():
     model.add(Dense(units=50, activation='relu'))
     model.add(Dense(units=10, activation='softmax'))
     model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accuracy'])
-    model.fit(X_train, y_train, epochs=20, batch_size=128)
+    model.fit(X_train, y_train, epochs=3, batch_size=128, verbose = 2)
     return model
 
 model = cnn_model()
