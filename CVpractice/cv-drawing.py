@@ -42,5 +42,18 @@ cv2.imwrite("canvas1_lines_rectangles.jpg", canvas1)
 cv2.imwrite('canvas2_circles.jpg', canvas2)
 cv2.imwrite('canvas3_circles_art.jpg', canvas3)
 
+canvas4 = np.zeros((300, 300, 3), dtype='uint8')
+
+for i in range(0, 30):
+    for r in range(0, 30):
+        if i%2 == 0:
+            cv2.rectangle(canvas4, (i * 10, r * 10), (i * 10 + 10, r * 10 + 10), (0, 0, 0))
+            cv2.rectangle(canvas4, (i * 10, r * 10), (i * 10 + 10, r * 10 + 10), (0, 0, 255))
+        else:
+            cv2.rectangle(canvas4, (i * 10, r * 10), (i * 10 + 10, r * 10 + 10), (0, 0, 255))
+            cv2.rectangle(canvas4, (i * 10, r * 10), (i * 10 + 10, r * 10 + 10), (0, 0, 0))
+
+cv2.imshow('design_challenge', canvas4)
+
 
 
