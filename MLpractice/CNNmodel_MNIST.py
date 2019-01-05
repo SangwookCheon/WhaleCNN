@@ -10,8 +10,8 @@ from keras.utils import to_categorical
 
 np.random.seed(7)
 
-train = pd.read_csv('/Users/45622/Downloads/all 2/train.csv')
-test = pd.read_csv('/Users/45622/Downloads/all 2/test.csv')
+train = pd.read_csv('/Users/45622/DevResources/MNIST_digits/train.csv')
+test = pd.read_csv('/Users/45622/DevResources/MNIST_digits/test.csv')
 X_train = (train.iloc[:, 1:].values).astype('float32')
 y_train = (train.iloc[:, 0].values).astype('float32')
 X_test = test.iloc[:, :].values.astype('float32')
